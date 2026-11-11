@@ -1,0 +1,10 @@
+project: savantenvs/source
+target: fuzz_ead_client
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz_ead_client/testsuite
+cmds:
+  - cmd: /mayhem/fuzz_ead_client
+    libfuzzer: true
+    dictionary: /mayhem/mayhem/fuzz_ead_client/fuzz_ead_client.dict
+    timeout: 5

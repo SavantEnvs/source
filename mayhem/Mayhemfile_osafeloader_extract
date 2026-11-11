@@ -1,0 +1,8 @@
+project: savantenvs/source
+target: osafeloader_extract
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/osafeloader_extract/testsuite
+cmds:
+  - cmd: /mayhem/osafeloader extract @@ -p file-system -o out.bin
+    timeout: 5

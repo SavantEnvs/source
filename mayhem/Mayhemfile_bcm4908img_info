@@ -1,0 +1,8 @@
+project: savantenvs/source
+target: bcm4908img_info
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/bcm4908img_info/testsuite
+cmds:
+  - cmd: /mayhem/bcm4908img info -i @@
+    timeout: 5
